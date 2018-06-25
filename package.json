@@ -1,0 +1,24 @@
+{
+  "name": "challenges",
+  "version": "1.0.0",
+  "description": "little application tests",
+  "main": "index.js",
+  "scripts": {
+    "watch:css" : "nodemon -e scss --exec 'npm run build:css'",
+    "build:css": "node-sass  assets/scss/ -r --include-path assets/scss/ --output-style compressed --source-map true -o assets/css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rapahaeru/rapahaeru.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rapahaeru/rapahaeru.github.io/issues"
+  },
+  "homepage": "https://github.com/rapahaeru/rapahaeru.github.io#readme",
+  "devDependencies": {
+    "node-sass": "4.9.0",
+    "nodemon": "1.17.5"
+  }
+}
