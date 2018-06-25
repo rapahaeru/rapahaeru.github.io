@@ -3,6 +3,18 @@
 @import "base/base";
 @import "object/buttons";
 
-.manager {
+.manager, .names {
 	background-color: $white;
+}
+
+.manager {
+	padding: 1em;
+}
+
+.names {
+	margin: 1em 0;
+}
+
+.name {
+	padding: 0.5em;
 }
