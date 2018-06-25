@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Hello!</title>
+	</head>
+	<body>
+		<div class="manager">
+			<label>
+				<input type="checkbox" class='selecting-all'>
+				Selecionar tudo
+			</label>
+		</div>
+		<ul>
+			<li>
+				<input type="checkbox" class='cael'>
+				<span>Cael</span>
+			</li>
+			<li>
+				<input type="checkbox" class='ueda'>
+				<span>Ueda</span>
+			</li>
+			<li>
+				<input type="checkbox" class='cellestino'>
+				<span>Celestino</span>
+			</li>
+			<li>
+				<input type="checkbox" class='vasco'>
+				<span>Vasco</span>
+			</li>
+		</ul>
+	</body>
+	<script>
+		document.querySelector('.selecting-all').addEventListener('click', function() {
+			let inputs = document.querySelectorAll('li input'),
+			inputSelectingAllIsChecked = this.checked;
+
+			if (inputSelectingAllIsChecked) {
+				inputs.forEach(keys => keys.checked = true);
+			} else {
+				inputs.forEach(keys => keys.checked = false);
+			}
+		});
+	</script>
+</html>
