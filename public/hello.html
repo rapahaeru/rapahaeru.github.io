@@ -3,13 +3,13 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>Hello!</title>
-		<link rel="stylesheet" href="assets/css/main.css">
+		<link rel="stylesheet" href="/assets/css/main.css">
 	</head>
 	<body>
 		<div class="manager">
 			<label>
 				Escolha a opção:
-				<select class="select">
+				<select class="select" onchange="hello.action(event)">
 					<option value="none">Nenhum selecionado</option>
 					<option value="all">Selecionar tudo</option>
 				</select>
@@ -34,16 +34,9 @@
 			</li>
 		</ul>
 	</body>
+	<script src="app/controllers/Hello.js"></script>
+	<script src="app/views/HelloView.js"></script>
 	<script>
-		document.querySelector('.select').addEventListener('change', function() {
-			let inputs = document.querySelectorAll('li input'),
-				selectedChoice = this.selectedOptions[0].value;
-
-			if (selectedChoice == "all") {
-				inputs.forEach(keys => keys.checked = true);
-			} else if (selectedChoice == "none") {
-				inputs.forEach(keys => keys.checked = false);
-			}
-		});
+		var hello = new Hello();
 	</script>
 </html>

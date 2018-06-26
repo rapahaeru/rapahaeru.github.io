@@ -4,7 +4,7 @@
   "description": "little application tests",
   "main": "index.js",
   "scripts": {
-    "watch:css" : "nodemon -e scss --exec 'npm run build:css'",
+    "watch:css": "nodemon -e scss --exec 'npm run build:css'",
     "build:css": "node-sass  assets/scss/ -r --include-path assets/scss/ --output-style compressed --source-map true -o assets/css"
   },
   "repository": {
@@ -20,5 +20,8 @@
   "devDependencies": {
     "node-sass": "4.9.0",
     "nodemon": "1.17.5"
+  },
+  "dependencies": {
+    "express": "4.16.3"
   }
 }
