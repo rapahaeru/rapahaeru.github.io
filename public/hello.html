@@ -12,25 +12,28 @@
 				<select class="select" onchange="hello.action(event)">
 					<option value="none">Nenhum selecionado</option>
 					<option value="all">Selecionar tudo</option>
+					<option value="last-seven">últimos 7 dias</option>
+					<option value="last-twenty">últimos 20 dias</option>
+					<option value="all-readed">e-mails lidos</option>
 				</select>
 			</label>
 		</div>
 		<ul class="names">
 			<li class="name">
 				<input type="checkbox" class='cael'>
-				<span>Cael</span>
+				<span>Cael <small>recebido em: <time datetime="2018-06-25">25/06/2018</time></small></span>
 			</li>
 			<li class="name">
 				<input type="checkbox" class='ueda'>
-				<span>Ueda</span>
+				<span>Ueda <small>recebido em: <time datetime="2018-06-20">20/06/2018</time></small></span>
 			</li>
-			<li class="name">
+			<li class="name readed">
 				<input type="checkbox" class='cellestino'>
-				<span>Celestino</span>
+				<span>Celestino <small>recebido em: <time datetime="2018-05-24">24/05/2018</time></small></span>
 			</li>
-			<li class="name">
+			<li class="name readed">
 				<input type="checkbox" class='vasco'>
-				<span>Vasco</span>
+				<span>Vasco <small>recebido em: <time datetime="2018-03-15">15/03/2018</time></small></span>
 			</li>
 		</ul>
 	</body>

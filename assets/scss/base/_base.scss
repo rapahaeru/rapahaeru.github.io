@@ -4,3 +4,16 @@ body {
 	font-family: "verdana";
 	padding: 1em;
 }
+
+small {
+	font-size: 0.8em;
+	font-style: italic;
+}
+
+.name span {
+	font-weight: 700;
+}
+
+.name.readed span {
+	font-weight: 500;
+}
