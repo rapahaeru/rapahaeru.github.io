@@ -20,4 +20,21 @@ class HelloView {
 			}
 		});
 	}
+
+	selectChoiceByFilter(elements, filter) {
+		elements.forEach(key => {
+			let item = key.parentElement.className;
+
+			if (item.includes(filter)) {
+				key.checked = true;
+			} else {
+				key.checked = false;
+			}
+		});
+	}
+
+	writeCheckedMessage(elementMessage, elementsLength) {
+		elementMessage.innerHTML = ((elementsLength > 0) ? `Você possui ${elementsLength} opções não lidas` : "Todos os itens lidos");
+	}
+
 }

@@ -4,6 +4,13 @@ class Hello {
 		this.HelloView = new HelloView();
 	}
 
+	checkChoicesNotReadeds() {
+		let elementsLength = document.querySelectorAll(".name.readed").length,
+			elementMessage = document.querySelector(".choices-not-readeds");
+
+			this.HelloView.writeCheckedMessage(elementMessage, elementsLength);
+	}
+
 	action(event) {
 		let inputs = document.querySelectorAll('li input'),
 			selectedChoice = event.currentTarget.selectedOptions[0].value;
@@ -17,15 +24,7 @@ class Hello {
 		} else if (choice == "none") {
 			this.HelloView.selectChoice(elements, false);
 		} else if (choice == "all-readed") {
-			[].map.call(elements, key => {
-				let item = key.parentElement.className;
-
-				if (item.includes("readed")) {
-					key.checked = true;
-				} else {
-					key.checked = false;
-				}
-			});
+			this.HelloView.selectChoiceByFilter(elements, "readed");
 		} else if (choice == "last-seven") {
 			this.HelloView.selectChoiceByLastDays(elements, 7);
 		} else if (choice == "last-twenty") {
@@ -33,12 +32,4 @@ class Hello {
 		}
 	}
 
-	// filterChoices(elements, choice) {
-
-	// 	[].map.call(elements, this.filterByReaded());
-	// }
-
-	// filterByReaded(elements) {
-	// 	console.log(elements);
-	// }
 }

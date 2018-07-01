@@ -6,7 +6,7 @@
 		<title>Hello!</title>
 		<link rel="stylesheet" href="/assets/css/main.css">
 	</head>
-	<body>
+	<body onload="hello.checkChoicesNotReadeds()">
 		<div class="manager">
 			<label>
 				Escolha a opção:
@@ -18,6 +18,7 @@
 					<option value="all-readed">e-mails lidos</option>
 				</select>
 			</label>
+			<span class="choices-not-readeds">loading</span>
 		</div>
 		<ul class="names">
 			<li class="name">
